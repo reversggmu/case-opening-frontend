@@ -1,0 +1,45 @@
+<section class="nav">
+    <div>
+      <p>
+        <mat-toolbar color="primary">    
+          <mat-toolbar-row>
+            <div class="page-title" (click)="onMainPageClick()">
+              <div>
+                <img class="page-title-img" src="../assets/title.png" alt="">
+              </div>
+              <div class="page-title-name">
+                Case Opening
+              </div>
+            </div>
+            <span class="example-spacer"></span>
+            <button (click)="onCreateBoxClick()" class="button" mat-flat-button color="primary">Stwórz skrzynke</button>
+            <button (click)="onHistoryClick()" class="button" mat-flat-button color="primary">Historia</button>
+          </mat-toolbar-row>
+        </mat-toolbar>
+      </p>
+    </div>
+</section>
+
+<section class="nav-info">
+  <div class="container">
+    <div class="info">
+      <div class="info-number">1023</div>
+      <div>online</div>
+      
+    </div>
+    <div class="info">
+      <div class="info-number">1454023</div>
+      <div>graczy</div> 
+    </div>
+    <div class="info">
+      <div class="info-number">7531034523</div>
+      <div>otwarte skrzynki</div> 
+    </div>
+    <div class="info">
+      <div class="info-number">345345277</div>
+      <div>podpisane kontrakty</div>
+    </div>
+  </div>
+</section>
+
+<router-outlet></router-outlet>

@@ -1,0 +1,26 @@
+::ng-deep .cdk-overlay-container {
+    background-color: #080e31b0 !important;
+}
+
+::ng-deep .mat-mdc-dialog-container {
+    --mdc-dialog-container-color: #12151d;
+}
+
+::ng-deep .mat-mdc-dialog-container .mdc-dialog__title, ::ng-deep .mat-mdc-dialog-container .mdc-dialog__content, ::ng-deep .mat-mdc-button:not(:disabled) {
+        color: whitesmoke;
+}
+
+
+.skin-box-content {
+    text-align: center;
+    padding: 2rem;
+    .skin-box-name {
+        font-size: 1.3rem;
+        text-transform: uppercase;
+        font-weight: 500;
+    }
+    .skin-box-img {
+        width: 200px;
+    }
+}
+

@@ -1,0 +1,16 @@
+<h2 mat-dialog-title>Wygrany skin</h2>
+<mat-dialog-content class="mat-typography">
+    <div class="skin-box">
+        <div class="skin-box-content">
+            <div class="skin-box-name">
+                <span>{{skinInformation.name}}</span>
+            </div>
+            <div><img class="skin-box-img" src="../../../assets/skins/{{skinInformation.img}}" alt=""></div>
+            <div class="skin-box-quality">{{skinInformation.quality}}</div>
+            <div class="skin-box-price">{{skinInformation.price}}$</div>
+        </div>
+    </div>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+    <button class="button" mat-flat-button mat-dialog-close color="primary">Zamknij</button>
+</mat-dialog-actions>

@@ -1,0 +1,18 @@
+<section class="section content">
+    <div class="section-header">
+      Lista skrzynek
+    </div>
+    <div class="case-list" >
+        <div class="case-box" *ngFor="let case of cases">
+          <div class="case-box-content" (click)="onCaseClick(case)">
+              <div><img src="../assets/boxes/1.png" alt=""></div>
+              <div class="case-box-name">{{case.name}}</div>
+              <div class="case-box-price">{{case.price}}$</div>
+          </div>
+        </div>
+    </div>
+</section>
+  
+<section class="footer">
+    Jakas tam informacja odnosnie strony, praw itp
+</section>

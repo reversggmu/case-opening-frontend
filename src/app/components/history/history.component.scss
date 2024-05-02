@@ -1,0 +1,58 @@
+
+
+.table-history {
+    padding: 1rem;
+    width: min-content;
+    .table-item-img {
+        width: 100px;
+        display: block;
+    }
+    .table-item-name {
+        font-weight: 500;
+        display: block;
+        text-align: center;
+    }
+    .table-item-price {
+        font-weight: 500;
+        color: green;
+        display: block;
+        text-align: center;
+    }
+    .table-hash {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
+
+::ng-deep .mat-mdc-table {
+    background-color: #1a1d28 !important;
+}
+
+::ng-deep .mdc-data-table__cell, .mdc-data-table__header-cell {
+    text-align: center;
+    color: whitesmoke;
+    font-size: 0.75rem;
+}
+
+::ng-deep .mat-mdc-paginator {
+    background-color: #1a1d28 !important;
+    color: whitesmoke !important;
+}
+
+::ng-deep .mat-mdc-select {
+    color: whitesmoke !important;
+}
+
+::ng-deep .mat-mdc-paginator-page-size-select {
+    border: 1px solid whitesmoke !important;
+}
+
+::ng-deep .mat-mdc-select-arrow {
+    color: rgb(255 255 255 / 54%) !important;
+}
+
+::ng-deep .mat-mdc-paginator-navigation-next .mat-mdc-paginator-icon, ::ng-deep .mat-mdc-paginator-navigation-last .mat-mdc-paginator-icon,
+::ng-deep .mat-mdc-paginator-navigation-first .mat-mdc-paginator-icon, ::ng-deep .mat-mdc-paginator-navigation-previous .mat-mdc-paginator-icon{
+    fill: whitesmoke !important;
+  } 

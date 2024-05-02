@@ -1,0 +1,56 @@
+.example-spacer {
+    flex: 1 1 auto;
+}
+
+.button {
+    margin: 0 5px;
+}
+
+.page-title {
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: flex-start; 
+    align-items: stretch;  
+    flex-direction: row; 
+    flex-wrap: nowrap; 
+    align-content: center;
+}
+
+.page-title-img {
+    width: 80px;
+}
+
+.page-title-name {
+    padding-top: 10%;
+}
+
+.mat-mdc-dialog-container .mdc-dialog__surface {
+    background-color: #12151d;
+}
+
+.container {
+    display: flex;
+    
+    justify-content: space-around; 
+    align-items: stretch; 
+    flex-direction: row; 
+    flex-wrap: nowrap; 
+    align-content: stretch;
+}
+
+.info {
+    padding: 15px;
+    text-transform: uppercase;
+    text-align: center;
+    width: 100%;
+    background-color: #1a1d28;
+    border-right: 1px solid #3d4659;
+    border-left: 1px solid #3d4659;
+}
+
+.info-number {
+    font-weight: 500;
+    font-size: 1.2rem;
+}

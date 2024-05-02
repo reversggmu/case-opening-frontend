@@ -1,0 +1,50 @@
+<section class="section box-information">
+    <div class="section-header title">
+        {{boxInformation.name}}
+    </div>
+</section>
+
+<section class="section box-opening">
+    <div class="box-opening-container" *ngIf="loaded">
+        <div class="box-opening-container-2"></div>
+        <div class="box-opening-content"[ngStyle]="{'transform': 'translate(' + transformX + 'px, ' + 0 + '%)'}">
+            <div class="content">
+                @for (skin of arrayContentSkins; track skin; let index = $index) {
+                    <div class="skin-box">
+                        <img class="skin-box-content-img" src="../../../assets/skins/{{skin.img}}" alt="">
+                        <span class="skin-box-content-name">{{skin.name}}</span>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+    <div class="section-body">
+        <button (click)="onOpenBoxClick()" class="button" mat-flat-button color="primary">Otwórz skrzynke ({{boxInformation.price}}$)</button>
+    </div>
+</section>
+
+<section class="section box-information">
+    <div class="section-header">
+        Zawartość skrzynki
+    </div>
+    <div>        
+        <div class="skin-list" >
+            @for (skin of boxInformation.items; track skin; let index = $index) {
+                <div class="skin-box">
+                    <div class="skin-box-content">
+                        <div class="skin-box-chance">
+                            <span>Szansa trafienia: {{skin.chance}}%</span>
+                        </div>
+                        <div class="skin-box-chance">
+                            <span>Zakres: {{skin.minRange}}-{{skin.maxRange}}</span>
+                        </div>
+                        <div><img class="skin-box-img" src="../../../assets/skins/{{skin.img}}" alt=""></div>
+                        <div class="skin-box-name">{{skin.name}}</div>
+                        <div class="skin-box-quality">{{skin.quality}}</div>
+                        <div class="skin-box-price">{{skin.price}}$</div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</section>

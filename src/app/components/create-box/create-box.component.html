@@ -1,0 +1,77 @@
+
+<section class="section box-information">
+    <div class="section-header">
+        Podstawowe informacje
+    </div>
+    <div class="section-body">
+        <mat-form-field class="box-name">
+            <mat-label>Nazwa skrzynki</mat-label>
+            <input matInput placeholder="Nazwa skrzynki" [(ngModel)]="boxInformation.name">
+        </mat-form-field>
+        <mat-slider min="5" max="25" step="1">
+            <label>Twoja prowizja: {{boxInformation.fee}}%</label>
+            <input matSliderThumb [(ngModel)]="boxInformation.fee">
+        </mat-slider>
+    </div>
+</section>
+
+<section class="section box-weapon">
+    <div class="section-header">
+        Lista przedmiotów
+    </div>
+    <div class="section-body">
+        <div class="skin-list">
+            @for (skin of skinsToSelect; track skin; let index = $index) {
+                <div class="skin-box">
+                    <div class="skin-box-content" (click)="onSkinClick(skin)">
+                        <div><img class="skin-box-img" src="../../assets/skins/{{skin.img}}" alt=""></div>
+                        <div class="skin-box-name">{{skin.name}}</div>
+                        <div class="skin-box-quality">{{skin.quality}}</div>
+                        <div class="skin-box-price">{{skin.price}}$</div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</section>
+
+<section class="section box-weapon-list">
+    <div class="section-header">
+        Wybrane przedmioty
+    </div>
+    <div class="section-body">
+        <div class="skin-selected-list">
+            <div class="skin-selected-content">
+                <div class="skin-selected-header">L.P</div>
+                <div class="skin-selected-header">OBRAZEK</div>
+                <div class="skin-selected-header">NAZWA SKINA</div>
+                <div class="skin-selected-header">CENA</div>
+                <div class="skin-selected-header">SZANSA TRAFIENIA ({{getCurrentPercentage()}}%)</div>
+                <div class="skin-selected-remove"></div>
+            </div>
+            @for (skin of boxInformation.items; track skin; let index = $index) {
+                <div class="skin-selected-content">
+                    <div>{{index+1}}</div>
+                    <div><img class="skin-selected-img" src="../../assets/skins/{{skin.img}}" alt=""></div>
+                    <div class="skin-selected-name">{{skin.name}} ({{skin.quality}})</div>
+                    <div class="skin-selected-price">{{skin.price}}$</div>
+                    <div class="skin-selected-chance">
+                        <mat-form-field class="selected-mat-form-field">
+                            <mat-label>Szansa trafienia(%):</mat-label>
+                            <input type="number" matInput placeholder="Szansa trafienia(%):" min="0" max="100" step="0.01" [(ngModel)]="skin.chance">
+                        </mat-form-field>
+                    </div>
+                    <div class="skin-selected-remove">
+                        <button (click)="onRemoveSkinClick(skin)" class="button" mat-flat-button color="primary">Usuń przedmiot</button>
+                    </div>
+                </div>
+            }
+            <button (click)="calculateBoxPrice()" class="button" mat-flat-button color="primary">Oblicz cene skrzynki</button>
+            <div>cena skrzynki: {{boxInformation.price}}</div>
+        </div>
+    </div>
+</section>
+
+<section class="section box-summary">
+    <button (click)="onCreateBox()" class="button" mat-flat-button color="primary">Stwórz skrzynke</button>
+</section>

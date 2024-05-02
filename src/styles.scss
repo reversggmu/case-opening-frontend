@@ -1,0 +1,36 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { 
+    background-color: #1b1f2b;
+    color: white;
+}
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.mat-toolbar.mat-primary {
+    background: #1b1f2b;
+    color: whitesmoke;
+    box-shadow: 0 0 20px 1px rgba(16, 19, 25, .5);
+}
+
+.section {
+    width: 1500px;
+    margin: 2rem auto 0 auto;
+    border: 1px solid rgba(96, 109, 135, .5);
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+}
+
+.section-header {
+    font-size: 24px;
+    font-weight: 600;
+    margin-right: auto;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding-bottom: 15px;
+}
+
+.section-body {
+    text-align: center;
+    margin-top: 3rem;
+}
+  

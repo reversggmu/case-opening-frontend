@@ -1,0 +1,34 @@
+.case-list { 
+  width: 1500px;
+  max-width: calc(100% - 10px);
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  .case-box {
+    width: calc(16.66667% - 20px);
+    position: relative;
+    border: 1px solid rgba(96, 109, 135, .25);
+    margin: 10px;
+    border-radius: 5px;
+    background-color: rgba(22, 25, 33, .25);
+    transition: .3s;
+    cursor: pointer;
+    .case-box-name {
+      text-align: center;
+      font-size: 17px;
+      text-transform: uppercase;
+    }
+    .case-box-price {
+      text-align: center;
+      font-weight: 500;
+      font-style: italic;
+      color: #0fad24;
+    }
+  }
+}
+
+.footer {
+  text-align: right;
+  padding: 15px;
+}
